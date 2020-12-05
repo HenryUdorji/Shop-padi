@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "1025956678670",
+    "firebase_url": "https://shop-padi-admin.firebaseio.com",
+    "project_id": "shop-padi-admin",
+    "storage_bucket": "shop-padi-admin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1025956678670:android:94894b49d716b99daf405f",
+        "android_client_info": {
+          "package_name": "com.codemountain.shop_padi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1025956678670-gn3ffpicn6a10q57jsn07butbbl9jq3h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5XmJHRhHpLBPtPuc4dXWZ0YdH1hpv7GU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1025956678670-gn3ffpicn6a10q57jsn07butbbl9jq3h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1025956678670:android:00fb39f768c07043af405f",
+        "android_client_info": {
+          "package_name": "com.codemountain.shoppadiclient"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1025956678670-gn3ffpicn6a10q57jsn07butbbl9jq3h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5XmJHRhHpLBPtPuc4dXWZ0YdH1hpv7GU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1025956678670-gn3ffpicn6a10q57jsn07butbbl9jq3h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Shop padi</string>
+    <string name="naira">\u20A6</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="turn_on_internet">Turn on Internet Connection</string>
+</resources>

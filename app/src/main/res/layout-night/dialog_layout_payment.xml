@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="@dimen/_250sdp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:padding="@dimen/_10sdp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Payment Method"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:textAlignment="center"
+        android:textSize="@dimen/_15ssp"
+        android:fontFamily="monospace"
+        android:id="@+id/headerText"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/colorAccent"
+        android:id="@+id/view"/>
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dialogDebitCreditRadioBtn"
+                android:checked="true"
+                android:text="Debit/Credit Card"
+                android:textSize="@dimen/_15ssp"
+                android:fontFamily="monospace"
+                android:textColor="@color/black"
+                />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PayPal"
+                android:fontFamily="monospace"
+                android:textSize="@dimen/_15ssp"
+                android:id="@+id/dialogPayPalRadioBtn"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"/>
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select"
+        android:textSize="@dimen/_15ssp"
+        android:background="@drawable/btn_drawable_state_primary"
+        android:textColor="@color/white"
+        android:fontFamily="monospace"
+        android:id="@+id/confirmPaymentMethodBtn"/>
+
+</LinearLayout>
+
+
+

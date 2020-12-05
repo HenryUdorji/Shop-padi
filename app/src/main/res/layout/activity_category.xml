@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CategoryActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@color/white"
+        android:id="@+id/toolbar"
+        app:titleTextAppearance="@style/TextStyle"
+        android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_weight="80"
+            android:layout_height="wrap_content"
+            android:text="CATEGORY"
+            android:textStyle="bold"
+            android:textSize="@dimen/_15ssp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/white"
+            android:fontFamily="monospace"
+            android:padding="@dimen/_5sdp"/>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:weightSum="100"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:id="@+id/categoryListRecyclerView"
+            android:layout_marginEnd="@dimen/_5sdp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="70"
+            android:id="@+id/categoryDetailsRecyclerView" />
+
+    </LinearLayout>
+
+</RelativeLayout>

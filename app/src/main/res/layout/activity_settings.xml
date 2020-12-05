@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SettingsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@color/white"
+        android:id="@+id/toolbar"
+        app:titleTextAppearance="@style/TextStyle"
+        android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_weight="80"
+            android:layout_height="wrap_content"
+            android:text="ACCOUNT SETTINGS"
+            android:textStyle="bold"
+            android:textSize="@dimen/_15ssp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/white"
+            android:fontFamily="monospace"
+            android:padding="@dimen/_5sdp"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/_10sdp"
+        android:id="@+id/timer"
+        tools:ignore="NotSibling">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enable Night Mode"
+            android:id="@+id/nightModeText"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Light Mode"
+            android:layout_below="@+id/nightModeText"
+            android:id="@+id/modeSelectedText"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11ssp"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/modeSwitch"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

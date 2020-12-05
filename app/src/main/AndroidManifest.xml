@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.codemountain.shoppadiclient">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".ShopPadi"
+        android:allowBackup="true"
+        android:icon="@drawable/shopping_basket"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/shopping_basket"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.ConfirmOrderActivity"></activity>
+        <activity android:name=".activity.ShippingAddressActivity" />
+        <activity android:name=".activity.CategoryActivity" />
+        <activity android:name=".activity.ProductDetailsActivity" />
+        <activity android:name=".activity.SettingsActivity" />
+        <activity android:name=".activity.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.CredentialsActivity" />
+        <activity android:name=".activity.HomeActivity" />
+    </application>
+
+</manifest>

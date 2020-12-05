@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/placedOrderLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OrderID:"
+            android:id="@+id/orderID"
+            android:textColor="@color/black"
+            android:fontFamily="monospace"
+            android:focusable="true"
+            android:clickable="true"
+            android:textSize="@dimen/_15ssp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="State: "
+            android:id="@+id/orderState"
+            android:textColor="@color/black"
+            android:fontFamily="monospace"
+            android:focusable="true"
+            android:clickable="true"
+            android:textSize="@dimen/_15ssp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date: "
+            android:id="@+id/orderDate"
+            android:textColor="@color/black"
+            android:fontFamily="monospace"
+            android:focusable="true"
+            android:clickable="true"
+            android:textSize="@dimen/_15ssp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/colorAccent"/>
+    </LinearLayout>
+</RelativeLayout>

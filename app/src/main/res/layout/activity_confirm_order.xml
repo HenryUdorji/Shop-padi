@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ConfirmOrderActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@color/white"
+        android:id="@+id/toolbar"
+        app:titleTextAppearance="@style/TextStyle"
+        android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="100"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="80"
+                android:layout_height="wrap_content"
+                android:id="@+id/toolbarSearchEdit"
+                android:text="CONFIRM ORDER"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15ssp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/white"
+                android:fontFamily="monospace"
+                android:padding="@dimen/_5sdp"/>
+
+            <ProgressBar
+                android:layout_width="@dimen/_20sdp"
+                android:layout_weight="20"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/toolbarProgress"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_3sdp"
+        app:cardElevation="@dimen/_3sdp"
+        android:layout_below="@id/toolbar"
+        app:contentPadding="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_outline_location_on"
+                android:background="@null" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:id="@+id/customerName"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/black"
+                    android:fontFamily="monospace"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="127, Church Rd, Idimu"
+                    android:id="@+id/homeAddress"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="monospace"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alimosho"
+                    android:id="@+id/cityName"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="monospace"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lagos"
+                    android:id="@+id/stateName"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="monospace"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00000000000"
+                    android:id="@+id/phoneNumber"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="monospace"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CHANGE"
+                    android:fontFamily="monospace"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_gravity="end"
+                    android:id="@+id/changeAddressText"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSelectPaymentMethod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:cardElevation="@dimen/_3sdp"
+        android:layout_below="@id/cardAddress"
+        android:clickable="true"
+        android:focusable="true"
+        app:contentPadding="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_outline_money"
+                android:background="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SELECT PAYMENT METHOD"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/_14ssp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="monospace"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:cardElevation="@dimen/_3sdp"
+        android:layout_below="@id/cardSelectPaymentMethod"
+        android:clickable="true"
+        android:focusable="true"
+        app:contentPadding="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grand Total"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17ssp"
+                android:fontFamily="monospace"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/naira"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15ssp"
+                android:fontFamily="monospace"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1000"
+                android:id="@+id/grandTotalText"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15ssp"
+                android:fontFamily="monospace"/>
+        </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Place Order"
+        android:textSize="@dimen/_15ssp"
+        android:background="@drawable/btn_drawable_state_primary"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:fontFamily="monospace"
+        android:id="@+id/placeOrderBtn"/>
+
+</RelativeLayout>

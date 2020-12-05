@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container"
+    tools:context=".fragments.AccountFragment">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@color/white"
+        android:id="@+id/toolbar"
+        app:titleTextAppearance="@style/TextStyle"
+        android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:weightSum="100"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="80"
+                android:layout_height="wrap_content"
+                android:id="@+id/toolbarSearchEdit"
+                android:text="ACCOUNT"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15ssp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/white"
+                android:fontFamily="monospace"
+                android:padding="@dimen/_5sdp"/>
+
+            <!--<ImageButton
+                android:layout_width="0dp"
+                android:layout_weight="15"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/ic_cart_white"
+                android:background="@null"
+                android:id="@+id/toolbarCart"
+                android:layout_gravity="center_vertical"/>-->
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/ic_settings"
+                android:background="@null"
+                android:id="@+id/toolbarSettings"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_marginBottom="@dimen/_10sdp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:src="@drawable/account_image_placeholder"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/accountImage"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fabSize="mini"
+                app:backgroundTint="@color/colorPrimary"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_110sdp"
+                android:src="@drawable/ic_camera_accent"
+                android:layout_alignEnd="@id/accountImage"
+                android:id="@+id/camFab"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@color/black"
+                android:fontFamily="monospace"
+                android:textSize="@dimen/_25ssp"
+                android:layout_below="@id/accountImage"
+                android:textAlignment="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/accountName"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textColor="@color/black"
+                android:fontFamily="monospace"
+                android:textSize="@dimen/_13ssp"
+                android:layout_below="@id/accountName"
+                android:textAlignment="center"
+                android:id="@+id/accountEmail"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/accountEmail"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:id="@+id/accountOrderCard">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Orders"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:fontFamily="monospace"
+                            android:focusable="true"
+                            android:clickable="true"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:textSize="@dimen/_20ssp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:background="@color/colorAccent"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/recyclerView"
+                            android:layout_margin="@dimen/_5sdp"/>
+
+                        <!-- <LinearLayout
+                             android:id="@+id/placedOrderLayout"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:orientation="vertical"
+                             android:padding="@dimen/_5sdp">
+
+                             <TextView
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:text="OrderID"
+                                 android:id="@+id/orderID"
+                                 android:textStyle="bold"
+                                 android:textColor="@color/black"
+                                 android:fontFamily="monospace"
+                                 android:focusable="true"
+                                 android:clickable="true"
+                                 android:textSize="@dimen/_18ssp" />
+
+                             <TextView
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:text="State: "
+                                 android:id="@+id/orderState"
+                                 android:textColor="@color/black"
+                                 android:fontFamily="monospace"
+                                 android:focusable="true"
+                                 android:clickable="true"
+                                 android:textSize="@dimen/_15ssp" />
+
+                             <TextView
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:text="Date: "
+                                 android:id="@+id/orderDate"
+                                 android:textColor="@color/black"
+                                 android:fontFamily="monospace"
+                                 android:focusable="true"
+                                 android:clickable="true"
+                                 android:textSize="@dimen/_15ssp" />
+                         </LinearLayout>-->
+
+
+                    </LinearLayout>
+
+                <!--<androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_below="@id/accountOrderCard"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:id="@+id/accountWishListCard">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="WishList"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:fontFamily="monospace"
+                            android:focusable="true"
+                            android:clickable="true"
+                            android:textSize="@dimen/_20ssp"
+                            android:layout_below="@id/accountName" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:background="@color/colorAccent"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>-->
+
+            </androidx.cardview.widget.CardView>
+
+            <!--<androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_below="@id/accountOrderCard"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/accountWishListCard">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="WishList"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:fontFamily="monospace"
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:textSize="@dimen/_20ssp"
+                        android:layout_below="@id/accountName" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/colorAccent"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>-->
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <!--######################  Bottom Navigation View#######################-->
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:backgroundTint="@color/colorAccent"
+        android:id="@+id/accountProgress"
+        android:visibility="gone"/>
+
+</RelativeLayout>
